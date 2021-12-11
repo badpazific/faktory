@@ -1,0 +1,65 @@
+# Project: Factory
+# Makefile created by Dev-C++ 5.4.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = nystylecheezepizza.o nystylepizzastore.o pizza.o pizzastore.o main.o nystylepepperonipizza.o chicagostyleveggiepizza.o chicagostyleclampizza.o nystyleveggiepizza.o nystyleclampizza.o chicagostylecheesepizza.o chicagostylepepperonipizza.o chicagostylepizzastore.o
+LINKOBJ  = nystylecheezepizza.o nystylepizzastore.o pizza.o pizzastore.o main.o nystylepepperonipizza.o chicagostyleveggiepizza.o chicagostyleclampizza.o nystyleveggiepizza.o nystyleclampizza.o chicagostylecheesepizza.o chicagostylepepperonipizza.o chicagostylepizzastore.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = Factory.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+nystylecheezepizza.o: nystylecheezepizza.cpp
+	$(CPP) -c nystylecheezepizza.cpp -o nystylecheezepizza.o $(CXXFLAGS)
+
+nystylepizzastore.o: nystylepizzastore.cpp
+	$(CPP) -c nystylepizzastore.cpp -o nystylepizzastore.o $(CXXFLAGS)
+
+pizza.o: pizza.cpp
+	$(CPP) -c pizza.cpp -o pizza.o $(CXXFLAGS)
+
+pizzastore.o: pizzastore.cpp
+	$(CPP) -c pizzastore.cpp -o pizzastore.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+nystylepepperonipizza.o: nystylepepperonipizza.cpp
+	$(CPP) -c nystylepepperonipizza.cpp -o nystylepepperonipizza.o $(CXXFLAGS)
+
+chicagostyleveggiepizza.o: chicagostyleveggiepizza.cpp
+	$(CPP) -c chicagostyleveggiepizza.cpp -o chicagostyleveggiepizza.o $(CXXFLAGS)
+
+chicagostyleclampizza.o: chicagostyleclampizza.cpp
+	$(CPP) -c chicagostyleclampizza.cpp -o chicagostyleclampizza.o $(CXXFLAGS)
+
+nystyleveggiepizza.o: nystyleveggiepizza.cpp
+	$(CPP) -c nystyleveggiepizza.cpp -o nystyleveggiepizza.o $(CXXFLAGS)
+
+nystyleclampizza.o: nystyleclampizza.cpp
+	$(CPP) -c nystyleclampizza.cpp -o nystyleclampizza.o $(CXXFLAGS)
+
+chicagostylecheesepizza.o: chicagostylecheesepizza.cpp
+	$(CPP) -c chicagostylecheesepizza.cpp -o chicagostylecheesepizza.o $(CXXFLAGS)
+
+chicagostylepepperonipizza.o: chicagostylepepperonipizza.cpp
+	$(CPP) -c chicagostylepepperonipizza.cpp -o chicagostylepepperonipizza.o $(CXXFLAGS)
+
+chicagostylepizzastore.o: chicagostylepizzastore.cpp
+	$(CPP) -c chicagostylepizzastore.cpp -o chicagostylepizzastore.o $(CXXFLAGS)
